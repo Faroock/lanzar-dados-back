@@ -14,7 +14,8 @@ const io = socketio(servidor, {
     "https://lanzar-dados.herokuapp.com", 
     "http://localhost:3000/",
     "https://lanzar-dados-back.herokuapp.com/",
-    "https://lanzar-dados-back.herokuapp.com"],
+    "https://lanzar-dados-back.herokuapp.com",
+    "*"],
 });
 
 const jugadores = [];
