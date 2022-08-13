@@ -8,7 +8,7 @@ const servidor = http.createServer(app);
 //Inicializamos socketio
 const socketio = require("socket.io");
 const io = socketio(servidor, {
-    cors: true,
+    cors: false,
     origins: ["http://localhost:3000", 
     "https://lanzar-dados.herokuapp.com/", 
     "https://lanzar-dados.herokuapp.com", 
