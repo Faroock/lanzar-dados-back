@@ -7,16 +7,8 @@ const servidor = http.createServer(app);
 
 //Inicializamos socketio
 const socketio = require("socket.io");
-const io = socketio(servidor, {
-    cors: false,
-    origins: ["http://localhost:3000", 
-    "https://lanzar-dados.herokuapp.com/", 
-    "https://lanzar-dados.herokuapp.com", 
-    "http://localhost:3000/",
-    "https://lanzar-dados-back.herokuapp.com/",
-    "https://lanzar-dados-back.herokuapp.com",
-    "*"],
-});
+const io = socketio(servidor);
+io.origins('*:*');
 
 const jugadores = [];
 
