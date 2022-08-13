@@ -1,0 +1,25 @@
+{
+  "name": "lanzar-dados-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bf-riturrieta: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@github.com/Faroock/lanzar-dados-back.git"
+  },
+  "author": "Rodrigo Iturrieta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Faroock/lanzar-dados-back/issues"
+  },
+  "homepage": "https://github.com/Faroock/lanzar-dados-back#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.5.1"
+  }
+}
