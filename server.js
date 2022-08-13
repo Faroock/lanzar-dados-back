@@ -7,8 +7,10 @@ const servidor = http.createServer(app);
 
 //Inicializamos socketio
 const socketio = require("socket.io");
-const io = socketio(servidor);
-io.origins('*:*');
+const io = socketio(servidor, {
+    cors: true,
+    origins: ['*:*'],
+});
 
 const jugadores = [];
 
