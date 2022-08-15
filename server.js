@@ -50,12 +50,12 @@ io.on("connection", (socket) => {
         const { idCronica, idJugador } = socket.data
         io.to(idCronica).emit('lanzando', {idJugador, lanzando: true, dados})
         console.log(dados)
-        const { resultado, hambre, dificultad } = lanzarDados(dados)
+        const { resultado, hambre, dificultad, tipo } = lanzarDados(dados)
         const espera = 1000 + Math.floor(Math.random() * 2000)
         setTimeout(() => {
             console.log({espera, resultado, hambre, dificultad})
             io.to(idCronica).emit('lanzando', {idJugador, lanzando: false})
-            io.to(idCronica).emit('dados', {resultado, hambre, dificultad, idJugador})
+            io.to(idCronica).emit('dados', {resultado, hambre, dificultad, idJugador, tipo})
         }, espera)
     });
 
