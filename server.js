@@ -23,7 +23,7 @@ const actualizarJugador = (jugador) => {
     }
 }
 
-const lanzarDados = ({cantidad, caras, hambre, dificultad}) => {
+const lanzarDados = ({cantidad, caras, hambre, dificultad, tipo}) => {
     let resultado = [];
     let resultadoHambre = [];
     for (let i = 1; i <= hambre; i++) {
@@ -32,7 +32,7 @@ const lanzarDados = ({cantidad, caras, hambre, dificultad}) => {
     for (let i = hambre + 1; i <= cantidad; i++) {
         resultado.push(Math.floor(Math.random() * caras) + 1);
     }
-    return {resultado, hambre: resultadoHambre, dificultad};
+    return {resultado, hambre: resultadoHambre, dificultad, tipo};
 }
 
 io.on("connection", (socket) => {
